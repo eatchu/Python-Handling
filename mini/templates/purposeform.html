@@ -1,0 +1,171 @@
+
+<!--
+	Road Trip by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Be the manager of your trip</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header" >
+				<div class="logo"><a href="index.html">Trip Manager  <span>by JHP</span></a></div>
+				<a href="#menu"><span>Menu</span></a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a>허진영</a></li>
+					<li><a>박두의</a></li>
+					<li><a>박준현</a></li>
+					<li><a>김기홍</a></li>
+				</ul>
+			</nav>
+		<form method="get" action="/result">
+		<div style="background-image: url('static/img/banner3.jpg'); background-size : 100% 100%;">
+           <section id="one" class="wrapper post bg-img" data-bg="banner2.jpg"/>
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>{{ name }} 님, 어떠한 여행이 되면 좋을까요?</h2>
+							<br><br>
+						</header>
+						<div class="content">
+							<fieldset>
+    										<input type="radio" id="extreme" name="purpose" value="25">
+									        <label for="extreme">익스트림 레져</label>
+									        <input type="radio" id="healing" name="purpose" value="100">
+    										<label for="healing">힐링</label>
+									        <input type="radio" id="theme" name="purpose" value="35">
+    										<label for="theme">테마파크</label> <br>
+                                            <input type="radio" id="enjoy" name="purpose" value="0">
+    										<label for="enjoy">유흥</label>
+                                            <input type="radio" id="food" name="purpose" value="70">
+    										<label for="food">식도락</label>
+                                            <input type="radio" id="study" name="purpose" value="80">
+    										<label for="study">새로운 체험</label>
+								            <input type="radio" id="landmark" name="purpose" value="55">
+    										<label for="landmark">랜드마크 탐방</label>
+								</fieldset>
+						</div>
+					</article>
+				</div>
+				<a href="#location" class="more">Learn More</a>
+			 </section>
+	     </div>
+		 <div style="background-image: url('static/img/banner4.jpg'); background-size : 100% 100%;">
+             <section id="location" class="wrapper post bg-img" data-bg="banner2.jpg"/>
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>{{ name }} 님, 어느 곳으로 떠나볼까요?</h2>
+							<br><br>
+						</header>
+						<div class="content">
+							<fieldset>
+    										<input type="radio" id="mountain" name="location" value="100">
+									        <label for="mountain">산</label>
+									        <input type="radio" id="city" name="location" value="50">
+    										<label for="city">도시</label>
+									        <input type="radio" id="sea" name="location" value="0">
+    										<label for="sea">바다</label>
+								</fieldset>
+						</div>
+					</article>
+				</div>
+				<a href="#time" class="more">Learn More</a>
+			 </section>
+	     </div>
+		 <div style="background-image: url('static/img/banner5.jpg'); background-size : 100% 100%;">
+           <section id="time" class="wrapper post bg-img" data-bg="banner2.jpg"/>
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>{{ name }} 님, 추억을 쌓으려면 언제가 좋을까요?</h2>
+							<br><br>
+						</header>
+						<div class="content">
+							<fieldset>
+    										<input type="radio" id="spring" name="season" value="30">
+									        <label for="spring">따스한 봄날</label>
+									        <input type="radio" id="summer" name="season" value="0">
+    										<label for="summer">무더운 여름날</label>
+									        <input type="radio" id="autumn" name="season" value="60">
+    										<label for="autumn">선선한 가을날</label>
+                                            <input type="radio" id="winter" name="season" value="100">
+    										<label for="winter">추운 겨울날</label>
+							</fieldset>
+						</div>
+					</article>
+				</div>
+				<a href="#dist" class="more">Learn More</a>
+			 </section>
+	     </div>
+         <div style="background-image: url('static/img/banner2.jpg'); background-size : 100% 100%;">
+           <section id="dist" class="wrapper post bg-img" data-bg="banner2.jpg"/>
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>{{ name }} 님, 서울에서 얼마나 멀리 떠나볼까요?</h2>
+							<br><br>
+						</header>
+						<div class="content">
+							<fieldset>
+    										가깝게   <input type="range" id="distance" name="distance">   멀게 <br>
+									        <label for="distance">이 정도 멀리.</label>
+							</fieldset>
+						</div>
+					</article>
+				</div>
+				<a href="#atmos" class="more">Learn More</a>
+			 </section>
+	     </div>
+         <div style="background-image: url('static/img/banner3.jpg'); background-size : 100% 100%;">
+           <section id="atmos" class="wrapper post bg-img" data-bg="banner2.jpg"/>
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>{{ name }} 님, 어떤 분위기가 좋을까요?</h2>
+							<br><br>
+						</header>
+						<div class="content">
+							<fieldset>
+								            <input type="radio" id="silence" name="atmosphere" value="0">
+									        <label for="silence">고즈넉하게 고요한</label>
+									        <input type="radio" id="semi-silence" name="atmosphere" value="33">
+    										<label for="semi-silence">조용하고 한적한</label>
+									        <input type="radio" id="small-city" name="atmosphere" value="66">
+    										<label for="small-city">아기자기한 소도시</label>
+                                            <input type="radio" id="metropolitan" name="atmosphere" value="100">
+    										<label for="metropolitan">시끌벅적한 대도시</label>
+							</fieldset>
+							<br><br>
+							<footer>
+							        <input type="submit" class="button alt" value="이제 결과를 볼까요?">
+							</footer>
+						</div>
+					</article>
+				</div>
+			 </section>
+	     </div>
+		</form>
+		<!-- Two -->
+
+
+		<!-- Scripts -->
+			<script src="static/js/jquery.min.js"></script>
+			<script src="static/js/jquery.scrolly.min.js"></script>
+			<script src="static/js/jquery.scrollex.min.js"></script>
+			<script src="static/js/skel.min.js"></script>
+			<script src="static/js/util.js"></script>
+			<script src="static/js/main.js"></script>
+
+	</body>
+</html>

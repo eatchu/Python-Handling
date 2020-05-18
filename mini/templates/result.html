@@ -1,0 +1,75 @@
+
+<!--
+	Road Trip by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Be the manager of your trip</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+	</head>
+	<style type="text/css">
+     img{
+     margin: 50px 0 0 40px;
+     border-radius : 100px;
+     box-shadow : 10px -10px 100px black;
+     }
+</style>
+	<body>
+
+		<!-- Header -->
+			<header id="header" >
+				<div class="logo"><a href="index.html">Trip Manager  <span>by JHP</span></a></div>
+				<a href="#menu"><span>Menu</span></a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a>허진영</a></li>
+					<li><a>박두의</a></li>
+					<li><a>박준현</a></li>
+					<li><a>김기홍</a></li>
+				</ul>
+			</nav>
+          <div style="background-image: url('static/img/banner3.jpg'); background-size : 100% 100%;">
+            <section id="banner" class="bg-img">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>Trip Manager 가 추천하는 결과는 다음과 같습니다.</h2>
+							<br><br>
+							<h4>{{city}}</h4>
+                            <br><br>
+						</header>
+                         <div class="content">
+							 <img src="static/img/{{idx}}.jpg" width ="400" height="400"  align="left">
+							 <br><br>
+							 {{com}}
+						 </div>
+
+					</article>
+                            <form method="get" action="/">
+                                <footer>
+							        <input type="submit" class="button alt" value="처음으로.">
+                                </footer>
+							</form>
+				</div>
+			</section>
+        </div>
+		<!-- Two -->
+
+
+		<!-- Scripts -->
+			<script src="static/js/jquery.min.js"></script>
+			<script src="static/js/jquery.scrolly.min.js"></script>
+			<script src="static/js/jquery.scrollex.min.js"></script>
+			<script src="static/js/skel.min.js"></script>
+			<script src="static/js/util.js"></script>
+			<script src="static/js/main.js"></script>
+
+	</body>
+</html>

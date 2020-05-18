@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>result emp table</title>
+    <style>
+        a{text-decoration : none;
+          color : #FF0080;}
+        a:hover{text-decoration : none;
+                color : red;}
+        li{color : #2E2E2E}
+        tr:hover{
+        font-weight: bold; /* 굵게 */
+        background-color: #00ccff; /* 배경색 : 하늘색 계열 */
+        cursor: pointer;  /* 커서 모양 변경 */
+        }
+    </style>
+</head>
+<body>
+  <div align="center">
+      <h3> {{ename}} 사원 정보 </h3>
+      <table border="1" width="1000">
+          <tr>
+              <td>
+                  <ul>
+                      {% if size >= 1 %}
+                         {% for row in data.split(',') %}
+                         <li> {{row}} </li>
+                         {% endfor %}
+                      {% else %}
+                         <li> 해당 사원 없음 </li>
+                      {% endif %}
+                  </ul>
+              </td>
+
+          </tr>
+      </table>
+      <a href="/"> 사원을 검색하시오 </a>
+  </div>
+</body>
+</html>

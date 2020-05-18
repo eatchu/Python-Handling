@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>patient</title>
+</head>
+<body>
+   <div align="center">
+     <h3> 환자 정보</h3>
+     <table border="1" width = "600">
+		{% if data : %}
+                 <tr>
+                     <td> 이름 : {{data[0]}} </td>
+                 </tr>
+                 <tr>
+                     <td> 성별 : {{data[1]}} </td>
+                 </tr>
+                 <tr>
+                     <td> 주민 : {{data[2]}} </td>
+                 </tr>
+                 <tr>
+                     <td> 주소 : {{data[3]}} </td>
+                 </tr>
+                 <tr>
+                     <td> 번호 : {{data[4]}} </td>
+                 </tr>
+                 <tr>
+                     <td> 메일 : {{data[5]}} </td>
+                 </tr>
+                 <tr>
+                     <td> 직업 : {{data[6]}} </td>
+                 </tr>
+
+          {% else %}
+          <tr>
+              <th colspan="4">
+                   <h3> 환자 정보가 없습니다.</h3>
+              </th>
+          </tr>
+          {% endif%}
+     </table>
+     <a href="/"> 메인화면 </a><br>
+     <a href="javascript:history.back()"> 뒤로가기 </a>
+   </div>
+
+</body>
+</html>

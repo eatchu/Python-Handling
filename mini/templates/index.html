@@ -1,0 +1,75 @@
+
+<!--
+	Road Trip by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Be the manager of your trip</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header" >
+				<div class="logo"><a href="index.html">Trip Manager  <span>by JHP</span></a></div>
+				<a href="#menu"><span>Menu</span></a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a>허진영</a></li>
+					<li><a>박두의</a></li>
+					<li><a>박준현</a></li>
+					<li><a>김기홍</a></li>
+				</ul>
+			</nav>
+          <div style="background-image: url('static/img/banner.jpg'); background-size : 100% 100%;">
+            <section id="banner" class="bg-img">
+				<div class="inner">
+					<header>
+						<h1>Trip Mannager</h1>
+					</header>
+				</div>
+				<a href="#one" class="more">Learn More</a>
+			</section>
+        </div>
+		<!-- Two -->
+      <div style="background-image: url('static/img/banner2.jpg'); background-size : 100% 100%;">
+       <section id="one" class="wrapper post bg-img" data-bg="banner2.jpg"/>
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>당신의 빛나는 추억을 위하여.</h2>
+							<p>본 프로그램은 KNN 알고리즘을 활용하여 당신이 원하는 곳으로 인도합니다.</p>
+						</header>
+						<div class="content">
+							<form method="GET" action="/subform1">
+								이름을 입력해 주세요. <input type="text" name ="name"> <br>
+								나이를 입력해 주세요. <input type="text" name = "age"> <br>
+								이메일을 입력해 주세요. <input type="text" name = "email"> <br>
+						    <footer>
+							    <input type="submit" class="button alt" value="다음 단계로.">
+						    </footer>
+						    </form>
+						</div>
+					</article>
+				</div>
+			</section>
+	  </div>
+
+
+		<!-- Scripts -->
+			<script src="static/js/jquery.min.js"></script>
+			<script src="static/js/jquery.scrolly.min.js"></script>
+			<script src="static/js/jquery.scrollex.min.js"></script>
+			<script src="static/js/skel.min.js"></script>
+			<script src="static/js/util.js"></script>
+			<script src="static/js/main.js"></script>
+
+	</body>
+</html>

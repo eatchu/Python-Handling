@@ -1,0 +1,4 @@
+my first text! 
+ this is my practice 
+ it's so hard to learn python
+my second text!
